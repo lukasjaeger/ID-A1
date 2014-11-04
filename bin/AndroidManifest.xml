@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PlayingActivity"
+            android:label="@string/title_activity_playing" >
+        </activity>
+        <activity
+            android:name=".PeriodicalReplayActivity"
+            android:label="@string/title_activity_periodical_replay" >
+        </activity>
     </application>
 
 </manifest>

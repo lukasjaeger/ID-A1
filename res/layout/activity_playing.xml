@@ -6,11 +6,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="de.tu_darmstadt.id_a1.MainActivity" >
+    tools:context="de.tu_darmstadt.id_a1.PlayingActivity" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World" />
+        android:text="@string/quiet" />
 
 </RelativeLayout>
