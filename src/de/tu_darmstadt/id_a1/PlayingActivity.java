@@ -1,9 +1,12 @@
 package de.tu_darmstadt.id_a1;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class PlayingActivity extends ActionBarActivity {
 
@@ -12,7 +15,7 @@ public class PlayingActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_playing);
 	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -30,5 +33,23 @@ public class PlayingActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		//TODO: Replace that workaround with the actual noise
+		final Handler handler = new Handler();
+		handler.postDelayed(new Runnable() {
+		  @Override
+		  public void run() {
+			  goBack();
+		  }
+		}, 5000);
+	}
+	
+	private void goBack(){
+		Intent nextIntent = new Intent(PlayingActivity.this, AppModesActivity.class);
+		startActivity(nextIntent);
 	}
 }

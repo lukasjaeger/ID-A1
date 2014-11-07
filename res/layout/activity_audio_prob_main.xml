@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.darmstadt.tu.kom.app.AudioProbMainActivity" 
+    android:orientation="vertical">  
+    	
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/welcome_message"
+        android:textSize="30sp" />
+
+    
+    
+    <TextView
+        android:id="@+id/chooseOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/chooseOptions_message"
+        android:textSize="15sp" />
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <Switch
+	        android:id="@+id/wifiswitch"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="switchWiFi"
+	        android:text="@string/wifiswitch" />
+         
+        <Switch
+	        android:id="@+id/bluetoothswitch"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="switchBluetooth"
+	        android:text="@string/bluetoothswitch" />
+        
+    </LinearLayout>
+
+     <Button
+         android:id="@+id/startButton"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/startButton" />
+
+</LinearLayout>

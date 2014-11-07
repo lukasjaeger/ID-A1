@@ -7,5 +7,20 @@
     <string name="title_activity_playing">PlayingActivity</string>
     <string name="title_activity_periodical_replay">PeriodicalReplayActivity</string>
     <string name="replay">Waiting xx seconds until sound is played next time.</string>
-
+	 <!-- All message texts -->
+    <string name="welcome_message">Welcome to Audio Probing App!</string>
+    <string name="chooseOptions_message">To proceed turn Wi-Fi or Bluetooth ON and press the start button.</string>
+    <string name="wifi_settings">Wi-Fi</string>
+    <string name="bluetooth_settings">Bluetooth</string>
+    <string name="wifiswitch">Wi-Fi</string>
+    <string name="switchWiFiOn_text">Wi-Fi is on</string>
+    <string name="switchWiFiOff_text">Wi-Fi is off</string>
+    <string name="bluetoothswitch">Bluetooth</string>
+    <string name="switchBluetoothOn_text">Bluetooth is on</string>
+    <string name="switchBluetoothOff_text">Bluetooth is off</string>
+    <string name="display_listner_mode_message">The app is in "Listening" mode to listen to sounds from surrounding phones.</string>
+    <string name="display_broadcast_mode_message">The app can choose to broadcast the sound by clicking below button.</string>
+    <string name="press_broadcast">Broadcast Sound</string>
+    <string name="title_activity_app_modes">AppModesActivity</string>
+    <string name="startButton">Start listening</string>
 </resources>
