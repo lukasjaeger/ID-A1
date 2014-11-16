@@ -23,4 +23,5 @@
     <string name="press_broadcast">Broadcast Sound</string>
     <string name="title_activity_app_modes">AppModesActivity</string>
     <string name="startButton">Start listening</string>
+    <string name="recordDummyButton">Press to record</string>
 </resources>

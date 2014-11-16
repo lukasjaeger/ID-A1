@@ -1,14 +1,15 @@
 package de.tu_darmstadt.id_a1;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class PlayingActivity extends ActionBarActivity {
+public class PlayingActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,8 @@ public class PlayingActivity extends ActionBarActivity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		//TODO: Replace that workaround with the actual noise
+		MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.beep);
+		mp.start();
 		final Handler handler = new Handler();
 		handler.postDelayed(new Runnable() {
 		  @Override

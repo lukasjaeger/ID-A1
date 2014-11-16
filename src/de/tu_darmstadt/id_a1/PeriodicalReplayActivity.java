@@ -1,11 +1,11 @@
 package de.tu_darmstadt.id_a1;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class PeriodicalReplayActivity extends ActionBarActivity {
+public class PeriodicalReplayActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

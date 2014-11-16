@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,8 +13,7 @@
         android:id="@+id/displaylistenertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/display_listner_mode_message"
-    />
+        android:text="@string/display_listner_mode_message" />
 
 	<Button
 	    android:id="@+id/startBroadcasting"
@@ -21,5 +21,11 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="doBroadcastAudio"
 	    android:text="@string/press_broadcast" />
+
+	<Button
+	    android:id="@+id/recordDummyButton"
+	    android:layout_width="157dp"
+	    android:layout_height="wrap_content"
+	    android:text="@string/recordDummyButton" />
 
 </LinearLayout>
