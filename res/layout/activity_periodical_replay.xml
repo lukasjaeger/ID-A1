@@ -9,7 +9,7 @@
     tools:context="de.tu_darmstadt.id_a1.PeriodicalReplayActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewPeriode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/replay" />
@@ -18,9 +18,9 @@
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textViewPeriode"
+        android:layout_alignRight="@+id/textViewPeriode"
+        android:layout_below="@+id/textViewPeriode"
         android:text="Quit and go back to listening mode" />
 
 </RelativeLayout>

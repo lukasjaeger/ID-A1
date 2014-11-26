@@ -50,4 +50,21 @@
          android:layout_height="wrap_content"
          android:text="@string/startButton" />
 
+     <TextView
+         android:id="@+id/textViewPeriode"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/periode_for_replay" />
+
+     <EditText
+         android:id="@+id/editPeriode"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:inputType="number"
+         android:text="0" >
+
+         <requestFocus />
+     </EditText>
+
 </LinearLayout>

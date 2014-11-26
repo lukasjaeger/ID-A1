@@ -1,16 +1,33 @@
 package de.tu_darmstadt.id_a1;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class PeriodicalReplayActivity extends Activity {
+	int periode;
+	Button startButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_periodical_replay);
+		Intent i = getIntent();
+		this.periode = i.getIntExtra("Periode", 0);
+		this.startButton = (Button) findViewById(R.id.startButton);
+		startButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent backIntent = new Intent (PeriodicalReplayActivity.this, AudioProbMainActivity.class);
+				startActivity(backIntent);
+			}
+		});
 	}
 
 	@Override
@@ -30,5 +47,60 @@ public class PeriodicalReplayActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();	
+		this.waitForThePeriod();
+	}
+	
+	private void waitForThePeriod(){
+		//Thread to stop the time
+		/*
+		WaitThread t = new WaitThread(periode);
+		t.start();
+		try {
+			t.join();
+			this.triggerReplay();
+			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		WaitingTask wt = new WaitingTask(this.periode);
+		wt.execute(this.periode);
+		this.triggerReplay();
+		
+	}
+	
+	private void triggerReplay(){
+		Intent replayIntent = new Intent(PeriodicalReplayActivity.this,PlayingActivity.class);
+		replayIntent.putExtra("Periode", this.periode);
+		startActivity(replayIntent);
+	}
+	
+	private class WaitingTask extends AsyncTask{
+		int periode = 0;
+		
+		public WaitingTask(int period){
+			this.periode = period;
+		}
+		
+		@Override
+		protected Object doInBackground(Object... params) {
+			// TODO Auto-generated method stub
+			try {
+				Thread.sleep(this.periode);
+				Intent replayIntent = new Intent(PeriodicalReplayActivity.this,PlayingActivity.class);
+				replayIntent.putExtra("Periode", this.periode);
+				startActivity(replayIntent);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
+		}
+		
 	}
 }

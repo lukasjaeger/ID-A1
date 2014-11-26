@@ -7,14 +7,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PlayingActivity extends Activity {
+	Intent callingIntent;
+	int periode;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_playing);
+		this.callingIntent = getIntent();
+		this.periode = this.callingIntent.getIntExtra("Periode", 0);
+		TextView textView1 = (TextView) findViewById(R.id.textView1);
+		textView1.setText(Integer.toString(periode));
 	}
 	
 	@Override
@@ -51,7 +58,14 @@ public class PlayingActivity extends Activity {
 	}
 	
 	private void goBack(){
-		Intent nextIntent = new Intent(PlayingActivity.this, AppModesActivity.class);
+		Intent nextIntent;
+		//If periode is 0, the app goes back to welcome screen
+		//Otherwise PeriodicalReplayActivity is called
+		if (periode == 0) nextIntent = new Intent(PlayingActivity.this, AudioProbMainActivity.class);
+		else{
+			nextIntent = new Intent(PlayingActivity.this, PeriodicalReplayActivity.class);
+			nextIntent.putExtra("Periode", this.periode);
+		}
 		startActivity(nextIntent);
 	}
 }

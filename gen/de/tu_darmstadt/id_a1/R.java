@@ -1649,7 +1649,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f060030;
         public static final int action_mode_bar_stub=0x7f06002f;
         public static final int action_mode_close_button=0x7f060022;
-        public static final int action_settings=0x7f060049;
+        public static final int action_settings=0x7f06004c;
         public static final int activity_chooser_view_content=0x7f060023;
         public static final int always=0x7f06000d;
         public static final int beginning=0x7f060012;
@@ -1664,6 +1664,7 @@ containing a value of this type.
         public static final int disableHome=0x7f06000a;
         public static final int displaylistenertext=0x7f060041;
         public static final int dropdown=0x7f060011;
+        public static final int editPeriode=0x7f060049;
         public static final int edit_query=0x7f060035;
         public static final int end=0x7f060014;
         public static final int expand_activities_button=0x7f060024;
@@ -1702,7 +1703,9 @@ containing a value of this type.
         public static final int startButton=0x7f060047;
         public static final int submit_area=0x7f06003e;
         public static final int tabMode=0x7f060003;
-        public static final int textView1=0x7f060048;
+        public static final int textView1=0x7f06004b;
+        public static final int textView2=0x7f06004a;
+        public static final int textViewPeriode=0x7f060048;
         public static final int title=0x7f060029;
         public static final int top=0x7f060015;
         public static final int up=0x7f060018;
@@ -1836,6 +1839,7 @@ containing a value of this type.
         public static final int chooseOptions_message=0x7f0b0016;
         public static final int display_broadcast_mode_message=0x7f0b0020;
         public static final int display_listner_mode_message=0x7f0b001f;
+        public static final int periode_for_replay=0x7f0b0025;
         public static final int press_broadcast=0x7f0b0021;
         public static final int quiet=0x7f0b0010;
         public static final int recordDummyButton=0x7f0b0024;

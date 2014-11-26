@@ -22,6 +22,7 @@
     <string name="display_broadcast_mode_message">The app can choose to broadcast the sound by clicking below button.</string>
     <string name="press_broadcast">Broadcast Sound</string>
     <string name="title_activity_app_modes">AppModesActivity</string>
-    <string name="startButton">Start listening</string>
+    <string name="startButton">Start broadcasting</string>
     <string name="recordDummyButton">Press to record</string>
+    <string name="periode_for_replay">Periode for replay</string>
 </resources>

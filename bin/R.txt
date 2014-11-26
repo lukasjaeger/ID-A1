@@ -347,7 +347,7 @@ int id action_menu_presenter 0x7f06001d
 int id action_mode_bar 0x7f060030
 int id action_mode_bar_stub 0x7f06002f
 int id action_mode_close_button 0x7f060022
-int id action_settings 0x7f060049
+int id action_settings 0x7f06004c
 int id activity_chooser_view_content 0x7f060023
 int id always 0x7f06000d
 int id beginning 0x7f060012
@@ -362,6 +362,7 @@ int id dialog 0x7f060010
 int id disableHome 0x7f06000a
 int id displaylistenertext 0x7f060041
 int id dropdown 0x7f060011
+int id editPeriode 0x7f060049
 int id edit_query 0x7f060035
 int id end 0x7f060014
 int id expand_activities_button 0x7f060024
@@ -400,7 +401,9 @@ int id startBroadcasting 0x7f060042
 int id startButton 0x7f060047
 int id submit_area 0x7f06003e
 int id tabMode 0x7f060003
-int id textView1 0x7f060048
+int id textView1 0x7f06004b
+int id textView2 0x7f06004a
+int id textViewPeriode 0x7f060048
 int id title 0x7f060029
 int id top 0x7f060015
 int id up 0x7f060018
@@ -464,6 +467,7 @@ int string bluetoothswitch 0x7f0b001c
 int string chooseOptions_message 0x7f0b0016
 int string display_broadcast_mode_message 0x7f0b0020
 int string display_listner_mode_message 0x7f0b001f
+int string periode_for_replay 0x7f0b0025
 int string press_broadcast 0x7f0b0021
 int string quiet 0x7f0b0010
 int string recordDummyButton 0x7f0b0024
