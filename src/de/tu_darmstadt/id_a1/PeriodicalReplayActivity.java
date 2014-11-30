@@ -12,6 +12,7 @@ import android.widget.Button;
 public class PeriodicalReplayActivity extends Activity {
 	int periode;
 	Button startButton;
+	WaitingTask wt;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class PeriodicalReplayActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent backIntent = new Intent (PeriodicalReplayActivity.this, AudioProbMainActivity.class);
+				wt.cancel(true);
 				startActivity(backIntent);
 			}
 		});
@@ -68,9 +70,8 @@ public class PeriodicalReplayActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		WaitingTask wt = new WaitingTask(this.periode);
+		this.wt = new WaitingTask(this.periode);
 		wt.execute(this.periode);
-		this.triggerReplay();
 		
 	}
 	
@@ -80,7 +81,7 @@ public class PeriodicalReplayActivity extends Activity {
 		startActivity(replayIntent);
 	}
 	
-	private class WaitingTask extends AsyncTask{
+	protected class WaitingTask extends AsyncTask{
 		int periode = 0;
 		
 		public WaitingTask(int period){
